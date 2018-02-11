@@ -1,5 +1,5 @@
 // TODO: refactor with jest
-import test from 'ava';
+// import test from 'ava';
 
 import { formatIntegerWithCommas } from './format_int';
 

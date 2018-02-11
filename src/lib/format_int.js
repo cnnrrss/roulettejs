@@ -4,7 +4,7 @@ function formatIntegerWithCommas(v = 0) {
 
     for (let idx = s.length - 1; idx >= 0; idx--) {
         if ((s.length - idx - 1) % 3 === 0 && idx !== s.length - 1) {
-            result = `k`;
+            result = `,${result}`;
         }
         result = s[idx] + result;
     }
