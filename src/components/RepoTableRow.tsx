@@ -1,7 +1,7 @@
 // import * as React from 'react';
 import { RepositoryEntity } from '../model/repository';
 import React, { FunctionComponent, CSSProperties, HTMLAttributes, MouseEvent, Component } from 'react';
-import ReactDom, { render } from 'react-dom';
+import './../styles/Table.scss'; 
 
 interface Props {
     repository: RepositoryEntity,
@@ -11,15 +11,6 @@ interface Props {
 interface State {
     hover?: boolean,
 }
-
-// const lineStyle: CSSProperties = {
-//     lineHeight: '36px',
-//     border: 'white',
-//     textOverflow: 'ellipsis',
-//     overflow: 'hidden',
-//     paddingLeft: '4em',
-//     borderRadius: '2em'
-// };
 
 export const RepoTableRow: FunctionComponent<Props> = ({repository}) => {
     return (

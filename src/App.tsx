@@ -4,6 +4,7 @@ import logo from './logo.png';
 import { Form } from './components/Form';
 import { RepoTable } from './components/RepoTable';
 import './App.scss';
+import './Header.scss';
 
 class App extends Component {
   render() {
@@ -27,7 +28,5 @@ class App extends Component {
     );
   }
 }
-
-// data: image / svg + xml; base64, PHN2ZyB2aWV3Qm94PSIwIDAgMzE2IDMxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwaDMxNnYzMTZIMFYwem01OCAyMDJ2MjBoMjAwdi0yMEg1OHptMzAgNDB2MjBoMTQwdi0yMEg4OHpNOTggNTR2MTIwaDEyMFY1NEg5OHoiIGZpbGw9IiNGQkZCRkIiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg ==
 
 export default App;
