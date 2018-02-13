@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Input } from './Input';
 import { Button } from './Button';
-// import { RepoTable } from "./RepoTable";
 
 export class Form extends Component {
 
     submitForm = () => {
-        const endpoint = ``
     }
 
     render() {

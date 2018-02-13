@@ -1,9 +1,8 @@
-import React, { Component, CSSProperties } from 'react';
+import React, { Component } from 'react';
 import { RepositoryEntity } from "../model/repository";
 import { RepoTableRow } from "./RepoTableRow";
-import { repositoryAPI } from '../api/repository';
 import { RepoTableHeader } from './RepoTableHeader';
-// import { RepoTableHeader } from "./RepoTableHeader"
+import { repositoryAPI } from '../api/repository';
 
 interface State {
     repositories: RepositoryEntity[];

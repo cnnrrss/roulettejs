@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import logo from './logo.png';
 import { Form } from './components/Form';
 import { RepoTable } from './components/RepoTable';
 import './App.scss';
@@ -10,9 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <div className="App-nav">
-        </div> */}
         <div className="App-header">
+          <div className="App-nav"> Roulette.js </div>
+        
           <h2>Have you ever thought to yourself..</h2>
           <h4>
             <div>"I haven't seen a new javascript library in a while. I wish I could be learning a new JS framework."</div>

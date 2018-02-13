@@ -1,6 +1,6 @@
-// import * as React from 'react';
 import { RepositoryEntity } from '../model/repository';
-import React, { FunctionComponent, CSSProperties, HTMLAttributes, MouseEvent, Component } from 'react';
+import React, { FunctionComponent, CSSProperties, Component } from 'react';
+
 import './../styles/Table.scss'; 
 
 interface Props {
@@ -40,16 +40,12 @@ export class TradeRow extends Component<Props, State> {
             linkStyle = { 
                 backgroundColor: '#4095c6',
                 borderCollapse: 'collapse',
-            //     background: -webkit - linear - gradient(to right, #282c34, #5B86E5);
-            // background: linear - gradient(to right, #282c34, #5B86E5);
             };
-            // , borderRadius: '2em'
         }
 
         return (
             <div 
                 className="grid-table-row" 
-                // ...lineStyle,
                 style={{...linkStyle}} 
                 onClick={this.confirmDelete.bind(this)}
                 onMouseEnter={this.toggleHover.bind(this)} 
