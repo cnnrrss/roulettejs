@@ -1,6 +1,8 @@
 import { RepositoryEntity } from "../model/repository";
 import { formatIntegerWithCommas } from '../lib/format_int';
 import { formatToTitle } from "../lib/format_to_title";
+import { formatToDescription } from '../lib/format_to_description';
+
 //?l=JavaScript&o=desc&q=framework+NOT+"hello+world"+NOT+"awesome"&s=stars&type=Repositories
 // curl https://api.github.com/search/repositories?q=framework+NOT+"hello+world"+NOT+"awesome"+language:javascript&sort=stars&order=desc
 // https://api.github.com/search/repositories\?q\=framework+NOT+"hello+world"+NOT+"awesome"+NOT+"todo"+language:javascript\&sort\=stars\&order\=desc\&per_page\=100
@@ -33,26 +35,21 @@ const responseToRepositoryEntities = (githubResponse: any): RepositoryEntity[] =
 };
 
 const mapResponseToRepositories = (githubRepo): RepositoryEntity => {
-    console.log(githubRepo.id, githubRepo.name, githubRepo.description);
     let title = formatToTitle(githubRepo.full_name);
-    console.log(title)
     let stars = formatIntegerWithCommas(githubRepo.stargazers_count);
-
-    let description = githubRepo.description.substr(0, 97);
-    if (description.length === 97) {
-        description = description.substr(0, Math.min(description.length, description.lastIndexOf(" "))) + "..."
-    }
-
+    let description = formatToDescription(githubRepo.description);
+    let { id, html_url, size, language, created_at, updated_at } = githubRepo;
+    
     return {
-        id: githubRepo.id,
+        id: id,
         name: title,
         description: description,
-        url: githubRepo.html_url,
+        url: html_url,
         stars: stars,
-        size: githubRepo.size,
-        language: githubRepo.language,
-        created_at: githubRepo.created_at,
-        updated_at: githubRepo.updated_at,
+        size: size,
+        language: language,
+        created_at: created_at,
+        updated_at: updated_at,
     };
 };
 
