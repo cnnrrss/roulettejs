@@ -7,7 +7,7 @@ export type RepoTableHeaderProps = {
 
 const defaultProps = {
     className: 'grid-table-row',
-    headerValues: ['Name', 'Stars', 'Url'],
+    headerValues: ['Name', 'Description', 'Stars'],
 };
 
 export class RepoTableHeader extends Component<RepoTableHeaderProps> {
@@ -22,8 +22,8 @@ export class RepoTableHeader extends Component<RepoTableHeaderProps> {
 
         return (
             <div className={className}>
-                {headerValues.map(header => (
-                    <div className="grid-table-cell"> {header} </div>
+                {headerValues.map((header, i) => (
+                    <div key={i} className="grid-table-cell"> {header} </div>
                 ))}
             </div>  
         )
