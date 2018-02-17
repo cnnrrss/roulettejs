@@ -1,19 +1,83 @@
-.App .App-nav {
+$rouletteBlue: #242832;
+
+.App {
   font-family: sans-serif;
   font-size: 18px;
-  
+  box-sizing: border-box;
+
   @media screen and (max-width: 1000px) {
     // padding: 2vh;
   }
 }
 
+body {
+	line-height: 1.6;
+	min-height: 100vh;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
 .App-nav {
-  text-align: left;
-  height: 70px;
-  padding-left: 8%;
-  margin: auto;
+  color: $rouletteBlue;
+  background-color: $rouletteBlue;
+}
+
+.App-nav h1 {
+  margin: 0;
+}
+
+.main-nav {
+  margin: 0;
+}
+
+.logo a,
+.main-nav a {
+	padding: 5px;
+	text-transform: uppercase;
+	text-align: center;
   display: block;
   color: #FFF;
+}
+
+.main-nav a {
+	// color: #FFF;
+  font-size: .99em;
+  padding-right: 5px;
+}
+
+.main-nav a:hover {
+	color:#a2aab3;
+}
+
+@media (min-width: 769px) {
+	.App-nav,
+	.main-nav {
+		display: flex;
+	}
+	.App-nav {
+    padding: .5%;
+		flex-direction: column;
+		align-items: center;
+    .App-nav{
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+      color: #34495e;
+    }
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.App-nav {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
 
 h2 {

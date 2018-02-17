@@ -1,9 +1,8 @@
-$rouletteBlue: #282c34;
+// $rouletteBlue: #282c34;
+$rouletteBlue: #242832;
 
 .App-header {
   background: $rouletteBlue;
-  background: -webkit-linear-gradient(to right, $rouletteBlue, #36D1DC);
-  background: linear-gradient(to right, $rouletteBlue, #36D1DC);
   text-align: center;
   overflow: hidden;  
   padding: 20px 0 50px;
