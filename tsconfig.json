@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "build",
+    "sourceMap": true,
     "target": "es6",
     "lib": [
       "dom",
@@ -21,6 +24,6 @@
     "pretty": true
   },
   "include": [
-    "src"
+    "./src**/*"
   ]
 }
