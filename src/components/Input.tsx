@@ -5,7 +5,8 @@ export type InputProps = {
     onChange?: EventHandler<ChangeEvent<HTMLInputElement>>,
     defaultValue?: string,
     placeholder?: string,
-    query?: string
+    query?: string,
+    value?: string
 } & typeof defaultProps;
 
 const defaultProps = {

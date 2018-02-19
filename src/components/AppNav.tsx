@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-export class AppNav extends Component {
-    render() {
+function AppNav() {
+    // render() {
         return (
             <div className="App-nav">
                 <h1 className="logo"><a href="#">RouletteJs</a></h1>
@@ -10,5 +10,7 @@ export class AppNav extends Component {
                 </ul>
             </div>
         )
-    }
+    // }
 }
+
+export default AppNav;

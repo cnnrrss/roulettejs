@@ -10,6 +10,7 @@ export type ButtonProps = {
     buttonType?: 'primary' | 'positive' | 'negative' | 'muted' | 'naked';
     type?: 'button' | 'submit' | 'reset';
     href?: string;
+    onClick?;
 } & typeof defaultProps;
 
 
@@ -22,7 +23,7 @@ const defaultProps = {
     type: 'button',
 };
 
-export class Button extends Component<ButtonProps> {
+export class Button extends Component<ButtonProps, {}> {
     static defaultProps = defaultProps;
     
     handleClick = () => {
