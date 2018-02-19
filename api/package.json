@@ -1,0 +1,10 @@
+{
+  "name": "github-fetch-repositories-from-api",
+  "description": "Fetch repos from github API",
+  "version": "0.0.1",
+  "author": "Connor Vanderhook",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^1.6.3"
+  }
+}
